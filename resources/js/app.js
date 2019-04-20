@@ -89,7 +89,7 @@ let routes = [
 
     //route surat jalan
     { path: '/suratJalan', component: require('./components/penjualan/suratJalan/suratJalan.vue').default },
-    { path: '/konfirmasisuratJalan', component: require('./components/penjualan/suratJalan/konfirmasiSuratJalan.vue').default },
+    { path: '/konfirmasiSuratJalan', component: require('./components/penjualan/suratJalan/konfirmasiSuratJalan.vue').default },
     { path: '/returnSuratJalan', component: require('./components/penjualan/suratJalan/returnSuratJalan.vue').default },
     { path: '/konfirmasiReturnSuratJalan', component: require('./components/penjualan/suratJalan/konfirmasiReturnSuratJalan.vue').default },
 

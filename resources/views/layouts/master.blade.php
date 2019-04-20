@@ -135,22 +135,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
                       <router-link to="/pesanPembelian" class="nav-link">
-                        <p>S.O. Penjualan</p>
+                        <p>P.O. Pembelian</p>
                       </router-link>
                     </li>
                     <li class="nav-item">
                       <router-link to="/konfirmasiPembelian" class="nav-link">
-                        <p>S.O. Konfirmasi</p>
+                        <p>P.O. Konfirmasi</p>
                       </router-link>
                     </li>
                     <li class="nav-item">
                       <router-link to="/diterimaPembelian" class="nav-link">
-                        <p>S.O. Diterima</p>
+                        <p>P.O. Diterima</p>
                       </router-link>
                     </li>
                     <li class="nav-item">
                       <router-link to="/batalPembelian" class="nav-link">
-                        <p>S.O. Batal</p>
+                        <p>P.O. Batal</p>
                       </router-link>
                     </li>
                   </ul>
@@ -228,22 +228,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
                       <router-link to="/pesanPenjualan" class="nav-link">
-                        <p>P.O. Penjualan</p>
+                        <p>S.O. Penjualan</p>
                       </router-link>
                     </li>
                     <li class="nav-item">
                       <router-link to="/konfirmasiPenjualan" class="nav-link">
-                        <p>P.O. Konfirmasi</p>
+                        <p>S.O. Konfirmasi</p>
                       </router-link>
                     </li>
                     <li class="nav-item">
                       <router-link to="/dikirimPenjualan" class="nav-link">
-                        <p>P.O. Dikirim</p>
+                        <p>S.O. Dikirim</p>
                       </router-link>
                     </li>
                     <li class="nav-item">
                       <router-link to="/batalPenjualan" class="nav-link">
-                        <p>P.O. Batal</p>
+                        <p>S.O. Batal</p>
                       </router-link>
                     </li>
                   </ul>
@@ -255,7 +255,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <a href="#" class="nav-link">
                     <p>
                       <i class="fas fa-bars"></i>
-                      &nbsp;Penerimaan Barang
+                      &nbsp;Surat Jalan
                       <i class="right fas fa-angle-left"></i>
                     </p>
                   </a>
@@ -266,7 +266,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </router-link>
                     </li>
                     <li class="nav-item">
-                      <router-link to="/konfirmasisuratJalan" class="nav-link">
+                      <router-link to="/konfirmasiSuratJalan" class="nav-link">
                         <p>Konfirmasi Surat Jalan</p>
                       </router-link>
                     </li>

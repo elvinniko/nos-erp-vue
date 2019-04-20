@@ -1,90 +1,161 @@
 <template>
     <div class="container">
-        <div class="row">
-            <h1>Surat Jalan</h1>
-            <div class="col-md-2">
-                <h2>Customer : Musdalifah<h2>
-                        <h2>Gudang :Toko Widodo</h2>
-                        <h2>Alamat : Jl. Buring</h2>
-                        <h2>Tanggal : 12-12-2012 </h2>
-            </div>
-            <div class="col-md-4">
-                <label class="">Nomor Surat jalan :</label>
-                <div class="">
-                    <input type="text" class="form-control" placeholder="SJ-145123512345">
+        <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Surat Jalan</h1>
+            </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+              <h2>SJ-150700005</h2>
+                <form @submit.prevent="readData()">
+                <!-- <button class="btn btn-success">
+                    <i class="fas fa-plus">&nbsp;&nbsp;Tambah Data P.O</i>
+                </button> -->
+
+                <!-- Contents -->
+                <br>
+                <div class="form-row">
+                    <!-- column 1 -->
+                    <div class="form-group col-md-3">
+                      <div class="form-group">
+                        <label for="inputSO">Nomor S.O.</label>
+                        <select class="form-control" id="inputSO">
+                          <option>SO-150700005</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputDate">Tanggal</label>
+                        <input type="date" class="form-control" id="inputDate1" value="2015-11-07">
+                      </div>
+                      <div class="form-group">
+                        <label for="inputSopir">Sopir</label>
+                        <input type="text" class="form-control" id="inputSopir" placeholder="Nama sopir">
+                      </div>
+                      <div class="form-group">
+                        <label for="inputNoPolisi">No Polisi</label>
+                        <input type="text" class="form-control" id="inputNoPolisi" placeholder="No polisi">
+                      </div>
+                    </div>
+                    <!-- pembatas -->
+                    <div class="form-group col-md-1"></div>
+                    <!-- column 2 -->
+                    <div class="form-group col-md-4">
+                      <div class="form-group">
+                        <label for="inputGudang">Gudang</label>
+                        <select class="form-control" id="inputGudang">
+                          <option>Toko Widodo</option>
+                          <option>Toko Dennis</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputCustomer">Customer</label>
+                        <select class="form-control" id="inputCustomer">
+                          <option>Musdalifah</option>
+                          <option>Sumarni</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAlamat">Alamat</label>
+                        <select class="form-control" id="inputAlamat">
+                          <option>Talok</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- pembatas -->
+                    <div class="form-group col-md-1"></div>
+                    <!-- column 3 -->
+                    <div class="form-group col-md-3">
+                      <label for="inputKeterangan">Keterangan</label>
+                      <textarea class="form-control" id="inputKeterangan" rows="5"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <label class="">Sopir :</label>
-                <div class="">
-                    <input type="text" class="form-control" placeholder="Suharjo">
+                <hr class="style1">
+                <div class="form-row">
+                  <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nama Barang</th>
+                            <th scope="col">Jumlah</th>
+                            <th scope="col">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Besi</td>
+                            <td>10</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Baja</td>
+                            <td>20</td>
+                            <td> </td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Kayu</td>
+                            <td>30</td>
+                            <td> </td>
+
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <label class="">Nomor Polisi :</label>
-                <div class="">
-                    <input type="text" class="form-control" placeholder=" N 9098 MM">
+                <div class="form-row">
+                  <div class="form-group col-md-1"></div>
+                  <div class="form-group col-md-3">
+                    <br>
+                    <button type="button" class="btn btn-success">&nbsp;&nbsp;Simpan&nbsp;&nbsp;</button>
+                  </div>
+                  <div class="form-group col-md-4"></div>
+                  <div class="form-group col-md-3">
+                    <div class="form-group">
+                      <br>
+                    <button type="button" class="btn btn-success">&nbsp;&nbsp;Cetak&nbsp;&nbsp;</button>
+                    </div>
+                  </div>
                 </div>
+              </form>
             </div>
-
-
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Nama Barang</th>
-                        <th scope="col">Jumlah</th>
-                        <th scope="col">Keterangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Besi</td>
-                        <td>10</td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Baja</td>
-                        <td>20</td>
-                        <td> </td>
-
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Kayu</td>
-                        <td>30</td>
-                        <td> </td>
-
-                    </tr>
-                </tbody>
-            </table>
-
-            <button class=" btn btn-primary btn-sm btn-block"><i class="fa fa-print"></i> Print</button>
         </div>
     </div>
 </template>
 
-<style>
-    .btn {
-      background-color: DodgerBlue;
-      border: none;
-      color: white;
-      padding: 12px 16px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    
-    /* Darker background on mouse-over */
-    .btn:hover {
-      background-color: RoyalBlue;
-    }
-</style>
-
 <script>
 export default {
-    
+    data() {
+        return {
+            filter: '',
+            pemesananpembelian : {},
+            form : new Form({
+
+            }),
+        }
+    },
+    methods : {
+        openModal() {
+            $('#modalOpen').modal('show')
+        },
+        readData() {
+            // axios.get('api/pemesananpembelian').then(({ data }) => (this.pemesananpembelian = data))
+        },
+    },
+    created() {
+        this.readData()
+        
+        Custom.$on('refresh', () => {
+            this.readData()
+        })
+    }
 }
 </script>
