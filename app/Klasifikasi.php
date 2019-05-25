@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Klasifikasi extends Model
 {
-    protected $table = 'kategori';
+    protected $table = 'kategoris';
 
     protected $fillable = [
-        'KodeKategori','NamaKategori','KodeItem'
+        'KodeKategori', 'NamaKategori', 'KodeItem'
     ];
 
     protected $primaryKey = 'KodeKategori'; // or null

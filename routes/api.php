@@ -26,14 +26,14 @@ Route::get('findSupplier', 'API\SupplierController@search');
 // Route::get('getAlamat', 'API\PelangganController@show');
 
 Route::apiResources([
-    'user'=>'API\UserController',
+    'user' => 'API\UserController',
     // 'pengguna'=>'API\PenggunaController',
-    'klasifikasi'=>'API\KlasifikasiController',
-    'gudang'=>'API\GudangController',
-    // 'item'=>'API\ItemController',
-    'matauang'=>'API\MataUangController',
-    'pelanggan'=>'API\PelangganController',
-    'alamat'=>'API\AlamatController',
-    'supplier'=>'API\SupplierController',
-    'satuan'=>'API\SatuanController',
+    'klasifikasi' => 'API\KlasifikasiController',
+    'gudang' => 'API\GudangController',
+    'item' => 'API\ItemController',
+    'matauang' => 'API\MataUangController',
+    'pelanggan' => 'API\PelangganController',
+    'alamat' => 'API\AlamatController',
+    'supplier' => 'API\SupplierController',
+    'satuan' => 'API\SatuanController',
 ]);

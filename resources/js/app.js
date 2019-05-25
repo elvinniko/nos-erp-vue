@@ -61,7 +61,7 @@ Vue.use(VueProgressBar, options)
 
 // vue router
 Vue.use(VueRouter)
-let routes = [
+const routes = [
 
     //route master
     {
