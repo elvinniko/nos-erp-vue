@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pelanggan extends Model
 {
-    protected $table = 'pelanggan';
+    protected $table = 'pelanggans';
 
     protected $fillable = [
-        'KodePelanggan','NamaPelanggan','Kontak', 'Handphone', 'Email'
+        'KodePelanggan', 'NamaPelanggan', 'Kontak', 'Handphone', 'Email'
     ];
 
     protected $primaryKey = 'KodePelanggan'; // or null
