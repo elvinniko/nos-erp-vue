@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gudang extends Model
 {
-    protected $table = 'lokasi';
+    protected $table = 'lokasis';
 
     protected $fillable = [
-        'KodeLokasi','NamaLokasi','Tipe'
+        'KodeLokasi', 'NamaLokasi', 'Tipe'
     ];
 
     protected $primaryKey = 'KodeLokasi'; // or null

@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class MataUang extends Model
 {
-    protected $table = 'matauang';
+    protected $table = 'matauangs';
 
     protected $fillable = [
-        'KodeMataUang','NamaMataUang','Nilai'
+        'KodeMataUang', 'NamaMataUang', 'Nilai'
     ];
 
     protected $primaryKey = 'KodeMataUang'; // or null
