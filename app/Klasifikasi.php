@@ -9,7 +9,7 @@ class Klasifikasi extends Model
     protected $table = 'kategoris';
 
     protected $fillable = [
-        'KodeKategori', 'NamaKategori', 'KodeItem'
+        'KodeKategori', 'NamaKategori', 'KodeItemAwal'
     ];
 
     protected $primaryKey = 'KodeKategori'; // or null

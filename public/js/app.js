@@ -83265,8 +83265,8 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.form.KodeItem,
-                              expression: "form.KodeItem"
+                              value: _vm.form.KodeItemAwal,
+                              expression: "form.KodeItemAwal"
                             }
                           ],
                           staticClass: "form-control",
@@ -83276,7 +83276,7 @@ var render = function() {
                             name: "KodeItem",
                             placeholder: "Kode Item"
                           },
-                          domProps: { value: _vm.form.KodeItem },
+                          domProps: { value: _vm.form.KodeItemAwal },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
@@ -83284,7 +83284,7 @@ var render = function() {
                               }
                               _vm.$set(
                                 _vm.form,
-                                "KodeItem",
+                                "KodeItemAwal",
                                 $event.target.value
                               )
                             }
@@ -83515,8 +83515,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.KodeItem,
-                                expression: "form.KodeItem"
+                                value: _vm.form.KodeItemAwal,
+                                expression: "form.KodeItemAwal"
                               }
                             ],
                             staticClass: "form-control",
@@ -83528,7 +83528,7 @@ var render = function() {
                               name: "KodeItem",
                               placeholder: "Kode Item"
                             },
-                            domProps: { value: _vm.form.KodeItem },
+                            domProps: { value: _vm.form.KodeItemAwal },
                             on: {
                               input: function($event) {
                                 if ($event.target.composing) {
@@ -83536,7 +83536,7 @@ var render = function() {
                                 }
                                 _vm.$set(
                                   _vm.form,
-                                  "KodeItem",
+                                  "KodeItemAwal",
                                   $event.target.value
                                 )
                               }

@@ -86,7 +86,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Kode Item: </label>
-                                <input disabled v-model="form.KodeItem" type="text" name="KodeItem" placeholder="Kode Item" class="form-control">
+                                <input disabled v-model="form.KodeItemAwal" type="text" name="KodeItem" placeholder="Kode Item" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="form-group">
                                 <label v-show="modal_change">Kode Item: </label>
-                                <input v-model="form.KodeItem" type="text" name="KodeItem" placeholder="Kode Item" 
+                                <input v-model="form.KodeItemAwal" type="text" name="KodeItem" placeholder="Kode Item" 
                                     class="form-control" :class="{ 'is-invalid': form.errors.has('KodeItem') }">
                                 <has-error :form="form" field="KodeItem"></has-error>
                             </div>

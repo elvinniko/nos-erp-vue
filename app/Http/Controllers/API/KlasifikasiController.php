@@ -27,17 +27,25 @@ class KlasifikasiController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        /*
+        $this->validate($request, [
             'KodeKategori' => 'required|string|unique:kategori',
             'NamaKategori' => 'required|string',
-            'KodeItem' => 'required|string|unique:kategori'
+            'KodeItemAwal' => 'required|string|unique:kategori'
         ]);
 
         return Klasifikasi::create([
             'KodeKategori' => $request['KodeKategori'],
             'NamaKategori' => $request['NamaKategori'],
-            'KodeItem' => $request['KodeItem']
+            'KodeItem' => $request['KodeItemAwal']
         ]);
+        */
+        $klasifikasi = new Klasifikasi;
+        $klasifikasi->KodeKategori = $request['KodeKategori'];
+        $klasifikasi->NamaKategori = $request['NamaKategori'];
+        $klasifikasi->KodeItem = $request['KodeItem'];
+        $klasifikasi->save();
+        return response()->json($klasifikasi);
     }
 
     /**
@@ -81,15 +89,15 @@ class KlasifikasiController extends Controller
         $klasifikasi->delete();
     }
 
-    public function search() {
-        if($filter = \Request::get('q')) {
-            $klasifikasi = Klasifikasi::where(function($query) use ($filter) {
-                $query->where('KodeKategori','LIKE',"%$filter%")
-                      ->orWhere('NamaKategori','LIKE',"%$filter%")
-                      ->orWhere('KodeItem','LIKE',"%$filter%");
+    public function search()
+    {
+        if ($filter = \Request::get('q')) {
+            $klasifikasi = Klasifikasi::where(function ($query) use ($filter) {
+                $query->where('KodeKategori', 'LIKE', "%$filter%")
+                    ->orWhere('NamaKategori', 'LIKE', "%$filter%")
+                    ->orWhere('KodeItem', 'LIKE', "%$filter%");
             })->paginate(10);
-        }
-        else {
+        } else {
             $klasifikasi = Klasifikasi::latest()->paginate(10);
         }
         return $klasifikasi;
