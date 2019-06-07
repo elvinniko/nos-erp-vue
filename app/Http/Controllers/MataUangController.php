@@ -15,24 +15,8 @@ class MataUangController extends Controller
      */
     public function index(Request $request)
     {
-        if ($request->ajax()) {
-
-            $data = MataUang::latest()->get();
-            return Datatables::of($data)
-                ->addIndexColumn()
-                ->addColumn('action', function ($row) {
-                    $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->KodeMataUang . '" data-original-title="Edit" class="edit btn btn-primary btn-sm editProduct">Edit</a>';
-                    $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->KodeMataUang . '" data-original-title="Delete" class="btn btn-danger btn-sm deleteProduct">Delete</a>';
-                    return $btn;
-                })
-                ->rawColumns(['action'])
-                ->make(true);
-        }
-        return view('master.matauang.index', compact('matauangs'));
-        /*
         $data = MataUang::oldest()->paginate(10);
         return view('master.matauang.index', compact('data'));
-        */
     }
 
     /**

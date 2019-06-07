@@ -12,7 +12,7 @@
         </div>
             <div class="card">
               <div class="card-header">
-                    <button class="btn btn-success" >
+                    <button class="btn btn-success" aria-labelledby="tambah" aria-hidden="true">
                         <i class="fas fa-plus-square">&nbsp;&nbsp;Tambah mata uang</i>
                     </button>
                 <div class="card-tools">
@@ -40,7 +40,7 @@
                           <td>{{ $datamatauang->NamaMataUang}}</td>
                           <td>{{ $datamatauang->Nilai}}</td>
                           <td>
-                            
+
                           </td>
                       @endforeach
                   </tr>
@@ -53,6 +53,27 @@
               </div>
             </div>
             <!-- /.card -->
+            <!-- Modal Create -->
+            <!-- Belum selesai Modalnya -->
+            <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="tambah" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="my-modal-title">Title</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Content</p>
+                  </div>
+                  <div class="modal-footer">
+                    Footer
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.end Modal -->
         </div>
     </div>
 @endsection
